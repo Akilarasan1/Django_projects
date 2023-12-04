@@ -1,4 +1,28 @@
 <!-- hospital_app/templates/hospital_app/home.html -->
-<h1>Welcome to the Hospital Management System</h1>
-<a href="{% url 'employee_login' %}">Employee Login</a>
-<a href="{% url 'patient_login' %}">Patient Login</a>
+{% extends 'main.html' %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Management System</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <div class="nav-bar">
+        <ul>
+            <li><b>Home</b></li>
+            <li><a href="{% url 'employee_login' %}">Employee Login</a></li>
+            <li><a href="{% url 'patient_login' %}">Patient Login</a></li>
+            <li> <a href="#">Contact us</li>
+            <li><a href="#">About us</li>
+
+        </ul>
+    </div>
+
+</body>
+</html>
+{% endblock %}
