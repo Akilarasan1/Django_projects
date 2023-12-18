@@ -1,5 +1,5 @@
 <!-- hospital_app/templates/hospital_app/home.html -->
-{% extends 'main.html' %}
+{% comment %} <!-- {% extends 'main.html' %} --> {% endcomment %}
 {% block content %}
 <!DOCTYPE html>
 <html lang="en">
@@ -8,8 +8,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hospital Management System</title>
     <style>
-
+       
     </style>
+    
 </head>
 <body>
     <div class="nav-bar">
@@ -17,12 +18,20 @@
             <li><b>Home</b></li>
             <li><a href="{% url 'employee_login' %}">Employee Login</a></li>
             <li><a href="{% url 'patient_login' %}">Patient Login</a></li>
-            <li> <a href="#">Contact us</li>
-            <li><a href="#">About us</li>
-
+            <li><a href="#">Contact us</a></li>
+            <li><a href="#">About us</a></li>
         </ul>
     </div>
 
+    <div class="main-content">
+        <h1>Welcome to Our Hospital</h1>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eget felis vel libero posuere
+            fermentum. Suspendisse potenti. Praesent vel arcu ac elit pretium fringilla. Integer ac enim vitae
+            purus lacinia consequat. In hac habitasse platea dictumst.
+        </p>
+        <!-- Add more content as needed -->
+    </div>
 </body>
 </html>
 {% endblock %}
