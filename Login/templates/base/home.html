@@ -1,5 +1,6 @@
 <!-- hospital_app/templates/hospital_app/home.html -->
-{% comment %} <!-- {% extends 'main.html' %} --> {% endcomment %}
+{% extends 'main.html' %}
+{% comment %} {% load static %} {% endcomment %}
 {% block content %}
 <!DOCTYPE html>
 <html lang="en">
@@ -8,8 +9,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hospital Management System</title>
     <style>
-       
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        
+        .nav-bar {
+            background-color: #3498db;
+            overflow: hidden;
+        }
+        
+        .nav-bar ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+        
+        .nav-bar li {
+            float: left;
+        }
+        
+        .nav-bar li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        
+        .nav-bar li b {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        
+        .nav-bar li a:hover {
+            background-color: #2980b9;
+        }
+        
+        .main-content {
+            padding: 20px;
+        }
     </style>
+    {% comment %} <link rel="stylesheet" href="{% static 'styles/style.css' %}"> {% endcomment %}
     
 </head>
 <body>

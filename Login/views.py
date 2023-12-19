@@ -1,5 +1,12 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login, logout
+from django.contrib import messages
+from django.shortcuts import render
+
+
+# Your views go here
+
+
 # HOME PAGE
 def home(request):
     return render(request, 'base/home.html')
@@ -26,9 +33,9 @@ def employee_logout(request):
 def register_EmpFrm(request):
     
     if request.method == "POST":
-        form = MyUserCreation(request.POST)
+        form = MyUserCreationForm(request.POST)
         if request.method == "POST":
-            form = MyUserCreation(request.POST)
+            form = MyUserCreationForm(request.POST)
             if form.is_valid():
                 user = form.save(commit = False)
                 user.username = user.username.lower()
@@ -36,6 +43,7 @@ def register_EmpFrm(request):
                 login(request, user)
                 return redirect('home')
     return redirect('base/home.html')
+
 
 #PATIENT LOGIN
 def patient_login(request):
